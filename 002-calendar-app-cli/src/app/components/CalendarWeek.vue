@@ -6,9 +6,9 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { store } from "../store.js";
-import { CalendarDay } from "./CalendarDay.vue";
+import CalendarDay  from "./CalendarDay.vue";
 
 export default {
   name: 'CalendarWeek',
