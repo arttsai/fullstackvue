@@ -23,8 +23,13 @@ html, body {
 
 .notes, .timestamps {
   padding: 5px 0px;
+  width: 300px;
 }
 
 .note-count {
   margin-top: 48px;
+}
+
+input-component {
+  width: 80%;
 }
