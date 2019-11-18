@@ -6,12 +6,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>003-customevent</title>
+    <link rel="stylesheet" href="./bulma/bulma.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but 003-customevent doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+      <div class="notes-secion">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <strong>Notes</strong>
+            <div v-for="note in notes" class="notes">
+              {{ note }}
+            </div>
+          </div>
+          <div class="column has-text-centered">
+            <strong>Timestamp</strong>
+            <div v-for="timestamp in timestamps" class="timestamps">
+              {{ timestamp }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <input-component :placeholder="placeholder" @add-note="addNote"></input-component>
+    </div>
+
   </body>
 </html>
